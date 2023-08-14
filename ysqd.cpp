@@ -35,7 +35,6 @@ int main()
             if (!LastTime && FullWhite)
             {
                 Genshin = true;                    // 设置显示图片标志
-                OutputDebugString("Show image\n"); // 输出调试信息
                 keybd_event(VK_INSERT, 0, 0, 0);   // 按下 Insert 键
                 Sleep(100);                        // 等待100ms
                 keybd_event(VK_INSERT, 0, 2, 0);   // 松开 Insert 键
@@ -44,7 +43,6 @@ int main()
             else if (LastTime && !FullWhite)
             {
                 Genshin = false;
-                OutputDebugString("Hide image\n");
                 keybd_event(VK_INSERT, 0, 0, 0);
                 Sleep(100);
                 keybd_event(VK_INSERT, 0, 2, 0);
